@@ -1,8 +1,17 @@
+provider = "node"
+
+[variables]
+NIXPACKS_NODE_VERSION = "20"
+NODE_ENV = "production"
+
 [phases.setup]
 nixPkgs = ["nodejs-20_x", "npm-9_x"]
 
+[phases.install]
+cmds = ["npm ci --legacy-peer-deps"]
+
 [phases.build]
-cmds = ["npm install", "npm run build"]
+cmds = ["npm run build"]
 
 [start]
 cmd = "npm start"
