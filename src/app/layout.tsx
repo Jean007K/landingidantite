@@ -7,20 +7,20 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://identitysecure.com'),
-  title: 'IdentitySecure - Verificación de Identidad Digital y Firma Electrónica',
+  metadataBase: new URL('https://idantite.com'),
+  title: 'Idantite - Verificación de Identidad Digital y Firma Electrónica',
   description: 'Soluciones de verificación de identidad digital, biometría facial, firma de contratos y registro de asistencia para Fintechs y empresas.',
   openGraph: {
     type: 'website',
     locale: 'es_CL',
-    url: 'https://identitysecure.com',
-    siteName: 'IdentitySecure',
+    url: 'https://idantite.com',
+    siteName: 'Idantite',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'IdentitySecure - Verificación Digital',
+        alt: 'Idantite - Verificación Digital',
       },
     ],
   },

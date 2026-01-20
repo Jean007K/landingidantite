@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Contacto | IdentitySecure',
+    title: 'Contacto | Idantite',
     description: 'Solicita una demo o contacta a nuestro equipo de ventas.',
 };
 
@@ -18,10 +18,10 @@ export default function ContactoPage() {
 
                         <div className="mt-10 space-y-4 text-base leading-7 text-gray-600">
                             <p>
-                                <strong className="text-gray-900">Ventas:</strong> ventas@identitysecure.com
+                                <strong className="text-gray-900">Ventas:</strong> ventas@idantite.com
                             </p>
                             <p>
-                                <strong className="text-gray-900">Soporte:</strong> soporte@identitysecure.com
+                                <strong className="text-gray-900">Soporte:</strong> soporte@idantite.com
                             </p>
                             <p>
                                 <strong className="text-gray-900">Teléfono:</strong> +56 2 2345 6789

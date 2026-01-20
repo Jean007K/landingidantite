@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Política de Privacidad | IdentitySecure',
+    title: 'Política de Privacidad | Idantite',
     description: 'Cómo gestionamos y protegemos tus datos.',
 };
 
@@ -11,7 +11,7 @@ export default function PrivacyPage() {
             <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center mb-10">Política de Privacidad</h1>
                 <p className="mt-6 text-lg leading-8">
-                    En IdentitySecure, nos tomamos muy en serio la privacidad de sus datos. Esta política describe cómo recopilamos, utilizamos y protegemos la información personal que usted nos proporciona.
+                    En Idantite, nos tomamos muy en serio la privacidad de sus datos. Esta política describe cómo recopilamos, utilizamos y protegemos la información personal que usted nos proporciona.
                 </p>
                 <div className="mt-10 max-w-2xl">
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900">1. Recopilación de Información</h2>

@@ -3,7 +3,7 @@ import { Building2, Smartphone, Briefcase, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Casos de Uso | IdentitySecure',
+    title: 'Casos de Uso | Idantite',
     description: 'Descubre cómo ayudamos a Fintechs, Telcos y Empresas de Servicios.',
 };
 

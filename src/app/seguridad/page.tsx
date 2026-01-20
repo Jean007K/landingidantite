@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Shield, Lock, Eye, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Seguridad y Cumplimiento | IdentitySecure',
+    title: 'Seguridad y Cumplimiento | Idantite',
     description: 'Estándares de seguridad bancaria, certificaciones iBeta y cumplimiento GDPR.',
 };
 

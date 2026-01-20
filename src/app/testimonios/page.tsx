@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Testimonios | IdentitySecure',
+    title: 'Testimonios | Idantite',
     description: 'Lo que dicen nuestros clientes sobre nuestras soluciones de identidad.',
 };
 
@@ -25,7 +25,7 @@ const reviews = [
         company: "Servicios Digitales SA"
     },
     {
-        body: "Necesitábamos una solución de control de asistencia fiable para nuestros 500 empleados en terreno. IdentitySecure fue la solución perfecta.",
+        body: "Necesitábamos una solución de control de asistencia fiable para nuestros 500 empleados en terreno. Idantite fue la solución perfecta.",
         author: "Ana P.",
         role: "Gerente RRHH",
         company: "Constructora Global"
@@ -39,7 +39,7 @@ export default function TestimoniosPage() {
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Confían en nosotros</h2>
                     <p className="mt-2 text-lg leading-8 text-gray-600">
-                        Descubre por qué las empresas líderes eligen IdentitySecure para proteger a sus usuarios.
+                        Descubre por qué las empresas líderes eligen Idantite para proteger a sus usuarios.
                     </p>
                 </div>
                 <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">

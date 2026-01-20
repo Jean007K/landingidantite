@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ShieldCheck } from 'lucide-react';
+import { Menu, X, ScanFace } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navigation = [
@@ -23,8 +23,8 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-              <ShieldCheck className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold text-primary tracking-tight">IdentitySecure</span>
+              <ScanFace className="h-8 w-8 text-primary" />
+              <span className="text-xl font-bold text-primary tracking-tight">Idantite</span>
             </Link>
           </div>
           <div className="flex lg:hidden">
@@ -55,11 +55,11 @@ export default function Header() {
           </div>
         </div>
       </nav>
-      
+
       {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -77,7 +77,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="mt-4 pt-4 border-t border-gray-100">
-                 <Link href="/contacto" onClick={() => setIsOpen(false)} className="w-full block text-center rounded-md bg-primary px-3 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-opacity-90">
+                <Link href="/contacto" onClick={() => setIsOpen(false)} className="w-full block text-center rounded-md bg-primary px-3 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-opacity-90">
                   Solicita Demo
                 </Link>
               </div>
