@@ -1,0 +1,140 @@
+{
+  "header": {
+    "home": "Accueil",
+    "services": "Services",
+    "security": "Sécurité",
+    "cases": "Cas d'usage",
+    "testimonials": "Témoignages",
+    "contact": "Contact",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "openMenu": "Ouvrir le menu principal",
+    "language": "Langue",
+    "locales": {
+      "es": "Español",
+      "en": "English",
+      "pt": "Português",
+      "fr": "Français"
+    }
+  },
+  "hero": {
+    "badge": "Liveness Detection iBeta Niveau 2 certifiée",
+    "title": "Vérification d'identité",
+    "titleAccent": "Sûre et sans friction",
+    "body": "Plateforme complète d'onboarding digital, biométrie faciale et signature électronique pour les fintechs et les entreprises. Conformité, sécurité et expérience utilisateur au même endroit.",
+    "demo": "Demander une démo",
+    "explore": "Explorer les services",
+    "verified": "Identité vérifiée",
+    "score": "Score de confiance : 99.8%",
+    "imageAlt": "Biométrie faciale Emverax"
+  },
+  "services": {
+    "title": "Nos solutions",
+    "sub": "Une technologie de pointe conçue pour protéger votre activité et simplifier la vie de vos utilisateurs.",
+    "more": "En savoir plus",
+    "items": [
+      {
+        "id": "biometria",
+        "title": "Biométrie faciale et liveness",
+        "body": "Vérification d'identité avec preuve de vie passive certifiée (iBeta). Détecte deepfakes et usurpations en temps réel."
+      },
+      {
+        "id": "firma",
+        "title": "Signature numérique certifiée",
+        "body": "Signez contrats et documents juridiques avec pleine validité, adossée à la vérification biométrique du signataire."
+      },
+      {
+        "id": "kyc",
+        "title": "KYC et onboarding automatisé",
+        "body": "Parcours d'inscription rapides et sûrs pour les fintechs. Validation de documents d'identité (OCR) et contrôles d'antécédents."
+      },
+      {
+        "id": "asistencia",
+        "title": "Contrôle d'assiduité biométrique",
+        "body": "Entrée et sortie des employés par reconnaissance faciale géolocalisée, sans matériel coûteux."
+      },
+      {
+        "id": "api",
+        "title": "API d'intégration",
+        "body": "Intégrez nos capacités de vérification dans votre app ou site via une API REST flexible et documentée."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Nous accompagnons les industries leaders",
+    "sub": "Nos solutions s'adaptent aux flux uniques de votre secteur.",
+    "link": "Voir le cas d'usage",
+    "items": [
+      {
+        "title": "Fintech & Banque",
+        "description": "Onboarding 100 % digital et sûr. KYC en quelques secondes pour l'ouverture de comptes et le crédit."
+      },
+      {
+        "title": "Télécommunications",
+        "description": "Vente de forfaits et d'équipements avec une validation d'identité robuste pour éviter la fraude."
+      },
+      {
+        "title": "Services & RH",
+        "description": "Contrôle d'assiduité fiable et signature à distance des contrats de travail."
+      }
+    ]
+  },
+  "security": {
+    "title": "Standards de sécurité bancaire et militaire",
+    "body": "Votre sécurité et celle de vos clients est notre priorité. Nous respectons les réglementations les plus strictes du marché.",
+    "items": [
+      "Conformité RGPD et réglementation chilienne",
+      "Certification iBeta Level 2 de liveness passive",
+      "Chiffrement AES-256 au repos et en transit",
+      "Audits de sécurité périodiques"
+    ],
+    "certsLink": "Voir toutes les certifications →"
+  },
+  "testimonials": {
+    "title": "Ils nous font confiance",
+    "items": [
+      {
+        "body": "La vérification faciale a réduit notre fraude de 95 % dès le premier mois.",
+        "author": "Directeur des risques",
+        "company": "Fintech Leader"
+      },
+      {
+        "body": "Le parcours de signature numérique est si fluide que nos clients le terminent en moins de 2 minutes.",
+        "author": "Directeur commercial",
+        "company": "Telco Connect"
+      },
+      {
+        "body": "Excellent support et API très facile à intégrer. Hautement recommandés.",
+        "author": "CTO",
+        "company": "Servicios Digitales SA"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Commencez à vérifier des identités dès aujourd'hui",
+    "body": "Planifiez une démonstration personnalisée et découvrez comment sécuriser votre activité.",
+    "sales": "Contacter les ventes",
+    "docs": "Lire la documentation"
+  },
+  "footer": {
+    "tagline": "Des solutions avancées de vérification d'identité et de biométrie pour un monde numérique plus sûr.",
+    "solutions": "Solutions",
+    "facial": "Vérification faciale",
+    "liveness": "Liveness Detection",
+    "sign": "Signature numérique",
+    "attendance": "Contrôle d'assiduité",
+    "api": "API Integrations",
+    "support": "Support",
+    "contact": "Contact",
+    "apiDocs": "Documentation API",
+    "status": "État du système",
+    "company": "Entreprise",
+    "about": "À propos",
+    "success": "Cas de succès",
+    "testimonials": "Témoignages",
+    "legal": "Légal",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "rights": "Emverax Tous droits réservés."
+  }
+}

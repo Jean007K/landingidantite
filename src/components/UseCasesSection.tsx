@@ -1,32 +1,23 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
-const cases = [
-    {
-        title: 'Fintech & Banca',
-        description: 'Onboarding 100% digital seguro. KYC en segundos para apertura de cuentas y créditos.',
-        color: 'bg-blue-600'
-    },
-    {
-        title: 'Telecomunicaciones',
-        description: 'Venta de planes y equipos con validación de identidad robusta para evitar fraudes.',
-        color: 'bg-indigo-600'
-    },
-    {
-        title: 'Servicios & RRHH',
-        description: 'Control de asistencia fiable y firma de contratos laborales a distancia.',
-        color: 'bg-slate-700'
-    },
-];
+type CaseItem = {
+    title: string;
+    description: string;
+};
 
-export default function UseCasesSection() {
+export default async function UseCasesSection() {
+    const t = await getTranslations('useCases');
+    const cases = t.raw('items') as CaseItem[];
+
     return (
         <section className="py-24 bg-primary text-white">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">Impulsamos industrias líderes</h2>
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">{t('title')}</h2>
                     <p className="mt-4 text-lg text-blue-100 max-w-2xl mx-auto">
-                        Nuestras soluciones escalan contigo, adaptándose a los flujos únicos de tu industria.
+                        {t('sub')}
                     </p>
                 </div>
 
@@ -36,7 +27,7 @@ export default function UseCasesSection() {
                             <h3 className="text-xl font-bold mb-4">{item.title}</h3>
                             <p className="text-blue-100 mb-6">{item.description}</p>
                             <Link href="/casos" className="inline-flex items-center text-sm font-medium hover:text-white/80">
-                                Ver caso de uso <ArrowRight className="ml-1 h-4 w-4" />
+                                {t('link')} <ArrowRight className="ml-1 h-4 w-4" />
                             </Link>
                         </div>
                     ))}
@@ -45,3 +36,4 @@ export default function UseCasesSection() {
         </section>
     );
 }
+

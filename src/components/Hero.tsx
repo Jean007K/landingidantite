@@ -2,8 +2,10 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+    const t = useTranslations('hero');
     return (
         <section className="relative overflow-hidden bg-white pt-16 pb-24 lg:pt-32 lg:pb-40">
             <div className="container mx-auto px-6 relative z-10">
@@ -16,27 +18,27 @@ export default function Hero() {
                     >
                         <div className="mb-6">
                             <span className="rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-600 ring-1 ring-inset ring-blue-600/10">
-                                Liveness Detection iBeta Nivel 2 Certificada
+                                {t('badge')}
                             </span>
                         </div>
                         <h1 className="text-5xl font-bold tracking-tight text-primary sm:text-6xl mb-8 leading-tight">
-                            Verificación de Identidad <br />
+                            {t('title')} <br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-                                Segura y Sin Fricción
+                                {t('titleAccent')}
                             </span>
                         </h1>
                         <p className="mt-6 text-xl leading-8 text-gray-600 max-w-xl">
-                            Plataforma integral de onboarding digital, biometría facial y firma electrónica para Fintechs y Corporativos. Cumplimiento, seguridad y experiencia de usuario en un solo lugar.
+                            {t('body')}
                         </p>
                         <div className="mt-10 flex flex-wrap items-center gap-6">
                             <Link
                                 href="/contacto"
                                 className="rounded-full bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-opacity-90 hover:scale-105 transition-all duration-200"
                             >
-                                Solicita una Demo
+                                {t('demo')}
                             </Link>
                             <Link href="/servicios" className="text-base font-semibold leading-6 text-gray-900 flex items-center gap-2 group">
-                                Explorar Servicios <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform">→</span>
+                                {t('explore')} <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform">→</span>
                             </Link>
                         </div>
                     </motion.div>
@@ -51,7 +53,7 @@ export default function Hero() {
                         <div className="relative w-full max-w-[500px] aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-200">
                             <Image
                                 src="/biometrics-hero.png"
-                                alt="Biometría Facial Emverax"
+                                alt={t('imageAlt')}
                                 fill
                                 className="object-cover"
                                 priority
@@ -70,8 +72,8 @@ export default function Hero() {
                                 <div className="h-3 w-3 rounded-full bg-green-500 animate-pulse" />
                             </div>
                             <div>
-                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Identidad Verificada</p>
-                                <p className="text-sm font-bold text-primary">Score de Confianza: 99.8%</p>
+                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">{t('verified')}</p>
+                                <p className="text-sm font-bold text-primary">{t('score')}</p>
                             </div>
                         </div>
                     </motion.div>
