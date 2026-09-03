@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Contacto | Idantite',
+    title: 'Contacto | Emverax',
     description: 'Solicita una demo o contacta a nuestro equipo de ventas.',
 };
 

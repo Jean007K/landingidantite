@@ -7,20 +7,20 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://idantite.com'),
-  title: 'Idantite - Verificación de Identidad Digital y Firma Electrónica',
+  metadataBase: new URL('https://emverax.com'),
+  title: 'Emverax - Verificación de Identidad Digital y Firma Electrónica',
   description: 'Soluciones de verificación de identidad digital, biometría facial, firma de contratos y registro de asistencia para Fintechs y empresas.',
   openGraph: {
     type: 'website',
     locale: 'es_CL',
-    url: 'https://idantite.com',
-    siteName: 'Idantite',
+    url: 'https://emverax.com',
+    siteName: 'Emverax',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Idantite - Verificación Digital',
+        alt: 'Emverax - Verificación Digital',
       },
     ],
   },

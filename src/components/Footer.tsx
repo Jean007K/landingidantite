@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className="space-y-8">
                         <Link href="/" className="flex items-center gap-2">
                             <ScanFace className="h-8 w-8 text-primary" />
-                            <span className="text-xl font-bold text-primary tracking-tight">Idantite</span>
+                            <span className="text-xl font-bold text-primary tracking-tight">Emverax</span>
                         </Link>
                         <p className="text-sm leading-6 text-gray-600">
                             Soluciones avanzadas de verificación de identidad y biometría para un mundo digital más seguro.
@@ -75,7 +75,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-                    <p className="text-xs leading-5 text-gray-500">&copy; {new Date().getFullYear()} Idantite Inc. Todos los derechos reservados.</p>
+                    <p className="text-xs leading-5 text-gray-500">&copy; {new Date().getFullYear()} Emverax Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>

@@ -51,7 +51,7 @@ export default function Hero() {
                         <div className="relative w-full max-w-[500px] aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-200">
                             <Image
                                 src="/biometrics-hero.png"
-                                alt="Biometría Facial Idantite"
+                                alt="Biometría Facial Emverax"
                                 fill
                                 className="object-cover"
                                 priority

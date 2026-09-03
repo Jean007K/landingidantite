@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { ScanFace, FileSignature, ShieldCheck, Users, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Servicios de Verificación de Identidad | Idantite',
+    title: 'Servicios de Verificación de Identidad | Emverax',
     description: 'Conoce nuestras soluciones de Biometría Facial, Firma Digital, KYC y Control de Asistencia.',
 };
 

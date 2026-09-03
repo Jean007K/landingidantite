@@ -24,7 +24,7 @@ export default function Header() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
               <ScanFace className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold text-primary tracking-tight">Idantite</span>
+              <span className="text-xl font-bold text-primary tracking-tight">Emverax</span>
             </Link>
           </div>
           <div className="flex lg:hidden">
