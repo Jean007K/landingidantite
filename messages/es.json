@@ -124,7 +124,7 @@
     "sign": "Firma Digital",
     "attendance": "Control de Asistencia",
     "api": "API Integrations",
-    "support": "Soporte",
+    "support": "Support",
     "contact": "Contacto",
     "apiDocs": "Documentación API",
     "status": "Estado del Sistema",
@@ -136,5 +136,205 @@
     "privacy": "Política de Privacidad",
     "terms": "Términos de Uso",
     "rights": "Emverax Todos los derechos reservados."
+  },
+  "contactPage": {
+    "metaTitle": "Contacto | Emverax",
+    "metaDescription": "Solicita una demo o contacta a nuestro equipo.",
+    "title": "Hablemos",
+    "body": "¿Listo para transformar la autenticación en tu empresa? Completa el formulario y nos pondremos en contacto contigo a la brevedad.",
+    "info": "Info",
+    "support": "Support",
+    "phone": "Teléfono",
+    "name": "Nombre",
+    "email": "Email corporativo",
+    "company": "Empresa",
+    "message": "Mensaje",
+    "submit": "Solicitar demo"
+  },
+  "serviciosPage": {
+    "metaTitle": "Servicios de verificación de identidad | Emverax",
+    "metaDescription": "Conoce nuestras soluciones de biometría facial, firma digital, KYC y control de asistencia.",
+    "kicker": "Nuestras capacidades",
+    "title": "Todo lo que necesitas para operar digitalmente con confianza",
+    "sub": "Plataforma modular diseñada para escalar junto a tu negocio. Elige los módulos que necesitas hoy y agrega más mañana.",
+    "items": [
+      {
+        "id": "biometria",
+        "name": "Verificación facial y liveness",
+        "description": "Nuestra tecnología detecta vida real (liveness) con certificación iBeta nivel 2, asegurando que la persona frente a la cámara es quien dice ser y está presente en ese momento, evitando fraudes con fotos, videos o máscaras."
+      },
+      {
+        "id": "firma",
+        "name": "Firma electrónica avanzada",
+        "description": "Firma documentos con plena validez legal. Vincula la identidad biométrica del firmante al documento, garantizando no repudio y trazabilidad completa."
+      },
+      {
+        "id": "kyc",
+        "name": "Onboarding digital (KYC)",
+        "description": "Automatiza la captura de datos de documentos de identidad (OCR) y verifícalos contra bases de datos oficiales. Reduce el tiempo de alta de clientes de días a segundos."
+      },
+      {
+        "id": "asistencia",
+        "name": "Control de asistencia biométrico",
+        "description": "Permite a tus empleados marcar asistencia desde sus móviles con validación facial y geolocalización. Ideal para trabajo remoto y en terreno."
+      },
+      {
+        "id": "api",
+        "name": "API REST flexible",
+        "description": "Integra todas estas funcionalidades en tus propios sistemas ERP, CRM o apps móviles con nuestra API documentada y SDKs ligeros."
+      }
+    ]
+  },
+  "casosPage": {
+    "metaTitle": "Casos de uso | Emverax",
+    "metaDescription": "Descubre cómo ayudamos a fintechs, telcos y empresas de servicios.",
+    "kicker": "Industrias",
+    "title": "Soluciones adaptadas a tu sector",
+    "sub": "Entendemos los desafíos únicos de cada industria. Nuestra tecnología se adapta a tus flujos de negocio.",
+    "benefits": "Beneficios clave:",
+    "demo": "Solicitar demo para {name}",
+    "items": [
+      {
+        "id": "fintech",
+        "name": "Fintech & Banca Digital",
+        "description": "Onboarding de clientes en menos de 30 segundos. Cumple con KYC/AML sin sacrificar la conversión. Reduce el fraude por suplantación de identidad en aperturas de cuenta y solicitudes de crédito.",
+        "benefits": ["Reducción del 90% en fraude", "Aumento del 30% en conversión", "Cumplimiento normativo automatizado"]
+      },
+      {
+        "id": "telco",
+        "name": "Telecomunicaciones",
+        "description": "Venta de tarjetas SIM y equipos con validación biométrica en punto de venta o remota. Asegura que quien contrata el plan es realmente quien dice ser.",
+        "benefits": ["Activación remota segura", "Prevención de robo de identidad", "Firma de contratos digitales"]
+      },
+      {
+        "id": "hr",
+        "name": "Servicios & RRHH",
+        "description": "Gestión de asistencia para personal en terreno y firma remota de contratos laborales. Ideal para empresas de logística, construcción y retail.",
+        "benefits": ["Geolocalización precisa", "Firma de contratos masiva", "Control de horas extras"]
+      }
+    ]
+  },
+  "seguridadPage": {
+    "metaTitle": "Seguridad y cumplimiento | Emverax",
+    "metaDescription": "Estándares de seguridad bancaria, certificaciones iBeta y cumplimiento GDPR.",
+    "title": "Seguridad sin compromisos",
+    "sub": "Protegemos tus datos y los de tus clientes con los más altos estándares de la industria.",
+    "cards": [
+      {
+        "id": "encryption",
+        "title": "Encriptación militar",
+        "body": "Todos los datos son encriptados en tránsito (TLS 1.3) y en reposo (AES-256). Tus llaves criptográficas son gestionadas en HSM."
+      },
+      {
+        "id": "liveness",
+        "title": "Liveness detection pasiva",
+        "body": "Certificación ISO 30107-3 (iBeta Level 2). Previene ataques de presentación como máscaras 3D, videos o fotos de alta resolución."
+      },
+      {
+        "id": "compliance",
+        "title": "Cumplimiento normativo",
+        "body": "Adherimos a GDPR, normativa CMF (Chile) y estándares ISO 27001 asegurando la privacidad y el manejo ético de los datos."
+      }
+    ],
+    "certsTitle": "Nuestras certificaciones y partners"
+  },
+  "testimoniosPage": {
+    "metaTitle": "Testimonios | Emverax",
+    "metaDescription": "Lo que dicen nuestros clientes sobre nuestras soluciones de identidad.",
+    "title": "Confían en nosotros",
+    "sub": "Descubre por qué las empresas líderes eligen Emverax para proteger a sus usuarios.",
+    "items": [
+      {
+        "body": "La implementación de la verificación facial redujo nuestro fraude en un 95% el primer mes. El soporte del equipo fue excepcional durante todo el proceso.",
+        "author": "María González",
+        "role": "Director de Riesgo",
+        "company": "Fintech Leader"
+      },
+      {
+        "body": "El proceso de firma digital es tan fluido que nuestros clientes lo completan en menos de 2 minutos. Hemos aumentado nuestra tasa de conversión significativamente.",
+        "author": "Carlos Rodriguez",
+        "role": "Gerente Comercial",
+        "company": "Telco Connect"
+      },
+      {
+        "body": "Excelente Support y API muy fácil de integrar. La documentación es clara y los SDKs funcionan a la primera. Altamente recomendados.",
+        "author": "Javier Silva",
+        "role": "CTO",
+        "company": "Servicios Digitales SA"
+      },
+      {
+        "body": "Necesitábamos una solución de control de asistencia fiable para nuestros 500 empleados en terreno. Emverax fue la solución perfecta.",
+        "author": "Ana P.",
+        "role": "Gerente RRHH",
+        "company": "Constructora Global"
+      }
+    ]
+  },
+  "privacyPage": {
+    "metaTitle": "Política de privacidad | Emverax",
+    "metaDescription": "Cómo gestionamos y protegemos tus datos.",
+    "title": "Política de privacidad",
+    "intro": "En Emverax, nos tomamos muy en serio la privacidad de sus datos. Esta política describe cómo recopilamos, utilizamos y protegemos la información personal que usted nos proporciona.",
+    "collectTitle": "1. Recopilación de información",
+    "collectBody": "Recopilamos información cuando se registra en nuestro sitio, completa un formulario o utiliza nuestros servicios de verificación.",
+    "useTitle": "2. Uso de la información",
+    "useBody": "La información que recopilamos se utiliza para mejorar el servicio al cliente, procesar transacciones y enviar correos electrónicos periódicos.",
+    "protectTitle": "3. Protección de datos",
+    "protectBody": "Implementamos una variedad de medidas de seguridad para mantener la seguridad de su información personal."
+  },
+  "registerPage": {
+    "metaTitle": "Crear cuenta | Emverax",
+    "metaDescription": "Registra tu empresa y comienza a verificar identidades con el plan gratuito.",
+    "title": "Crea la cuenta de tu empresa",
+    "body": "Completa los datos de tu organización. Te asignamos el plan de prueba (10 verificaciones al mes) y puedes entrar de inmediato al panel.",
+    "stepsLabel": "Pasos del registro",
+    "step": "Paso",
+    "stepCompany": "Datos de la empresa",
+    "stepPassword": "Crear contraseña",
+    "contactName": "Nombre de contacto",
+    "email": "Correo institucional",
+    "emailHint": "No se aceptan Gmail, Hotmail, Outlook ni correos personales similares.",
+    "legalName": "Nombre legal / razón social",
+    "commercialName": "Nombre comercial",
+    "country": "País",
+    "taxId": "Número fiscal",
+    "industry": "Rubro / actividad",
+    "phone": "Teléfono",
+    "website": "Sitio web",
+    "companySize": "Tamaño de la empresa",
+    "optional": "opcional",
+    "selectPlaceholder": "Selecciona una opción",
+    "continue": "Continuar",
+    "back": "Volver",
+    "passwordIntro": "Elige una contraseña para el administrador de la cuenta. Después te llevamos al inicio de sesión.",
+    "password": "Contraseña",
+    "passwordConfirm": "Confirmar contraseña",
+    "termsPrefix": "Acepto la",
+    "privacyLink": "política de privacidad",
+    "termsJoin": " y los ",
+    "termsLink": "términos de uso",
+    "submit": "Crear cuenta",
+    "submitting": "Creando cuenta…",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "signIn": "Iniciar sesión",
+    "errOptions": "No se pudieron cargar los catálogos. Recarga la página.",
+    "errContact": "Indica el nombre de la persona de contacto.",
+    "errEmail": "Indica un correo válido.",
+    "errFreeMail": "Usa un correo institucional. No se permiten Gmail, Hotmail ni similares.",
+    "errLegal": "Indica el nombre legal de la empresa.",
+    "errCommercial": "Indica el nombre comercial.",
+    "errCountry": "Selecciona el país.",
+    "errTax": "Indica el número fiscal de la empresa.",
+    "errIndustry": "Selecciona el rubro.",
+    "errSize": "Selecciona el tamaño de la empresa.",
+    "errPhone": "Indica un teléfono válido.",
+    "errPasswordLen": "La contraseña debe tener al menos 10 caracteres.",
+    "errPasswordComplexity": "La contraseña debe incluir mayúscula, minúscula y número.",
+    "errPasswordEmail": "La contraseña no puede ser igual al correo.",
+    "errPasswordMatch": "Las contraseñas no coinciden.",
+    "errTerms": "Debes aceptar los términos y la política de privacidad.",
+    "errCaptcha": "Completa la verificación anti-bot.",
+    "errGeneric": "No se pudo crear la cuenta. Revisa los datos e inténtalo de nuevo.",
+    "errNetwork": "No hay conexión con el servidor. Inténtalo de nuevo."
   }
 }

@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { DASH_LOGIN_URL, DASH_REGISTER_URL } from '@/lib/urls';
+import { DASH_LOGIN_URL, REGISTER_PATH } from '@/lib/urls';
 
 export default function Header() {
   const t = useTranslations('header');
@@ -67,12 +67,12 @@ export default function Header() {
             >
               {t('login')}
             </a>
-            <a
-              href={DASH_REGISTER_URL}
+            <Link
+              href={REGISTER_PATH}
               className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-opacity-90 transition-all"
             >
               {t('register')}
-            </a>
+            </Link>
             <LanguageSwitcher />
           </div>
         </div>
@@ -105,13 +105,13 @@ export default function Header() {
                 >
                   {t('login')}
                 </a>
-                <a
-                  href={DASH_REGISTER_URL}
+                <Link
+                  href={REGISTER_PATH}
                   onClick={() => setIsOpen(false)}
                   className="w-full block text-center rounded-md bg-primary px-3 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-opacity-90"
                 >
                   {t('register')}
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
