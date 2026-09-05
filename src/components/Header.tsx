@@ -63,16 +63,20 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
             <a
               href={DASH_LOGIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-semibold text-gray-700 hover:text-primary transition-colors"
             >
               {t('login')}
             </a>
-            <Link
+            <a
               href={REGISTER_PATH}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-opacity-90 transition-all"
             >
               {t('register')}
-            </Link>
+            </a>
             <LanguageSwitcher />
           </div>
         </div>
@@ -100,18 +104,22 @@ export default function Header() {
               <div className="mt-4 pt-4 border-t border-gray-100 space-y-3">
                 <a
                   href={DASH_LOGIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                   className="w-full block text-center rounded-md px-3 py-2.5 text-base font-semibold text-gray-900 ring-1 ring-inset ring-gray-200 hover:bg-gray-50"
                 >
                   {t('login')}
                 </a>
-                <Link
+                <a
                   href={REGISTER_PATH}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                   className="w-full block text-center rounded-md bg-primary px-3 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-opacity-90"
                 >
                   {t('register')}
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

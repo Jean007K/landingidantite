@@ -32,7 +32,9 @@ export default function LanguageSwitcher() {
   }, [open]);
 
   const selectLocale = (next: Locale) => {
-    document.cookie = `NEXT_LOCALE=${next};path=/;max-age=31536000;SameSite=Lax`;
+    const host = window.location.hostname;
+    const domain = host === 'emverax.com' || host.endsWith('.emverax.com') ? ';Domain=.emverax.com' : '';
+    document.cookie = `NEXT_LOCALE=${next};Path=/${domain};max-age=31536000;SameSite=Lax`;
     setOpen(false);
     router.refresh();
   };

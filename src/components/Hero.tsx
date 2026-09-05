@@ -16,11 +16,6 @@ export default function Hero() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="mb-6">
-                            <span className="rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-600 ring-1 ring-inset ring-blue-600/10">
-                                {t('badge')}
-                            </span>
-                        </div>
                         <h1 className="text-5xl font-bold tracking-tight text-primary sm:text-6xl mb-8 leading-tight">
                             {t('title')} <br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
