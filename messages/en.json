@@ -134,7 +134,11 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
-    "rights": "Emverax All rights reserved."
+    "cookies": "Cookies",
+    "endUser": "End users",
+    "requests": "Data requests",
+    "aup": "Acceptable use",
+    "rights": "emverax LLC. All rights reserved."
   },
   "contactPage": {
     "metaTitle": "Contact | Emverax",

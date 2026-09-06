@@ -460,7 +460,7 @@ export default function RegisterForm() {
               {t('termsPrefix')}{' '}
               <Link href="/privacy" className="font-semibold text-primary hover:underline">{t('privacyLink')}</Link>
               {t('termsJoin')}
-              <a href="/privacy" className="font-semibold text-primary hover:underline">{t('termsLink')}</a>.
+              <Link href="/terms" className="font-semibold text-primary hover:underline">{t('termsLink')}</Link>.
             </span>
           </label>
           {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="min-h-[65px]" /> : null}

@@ -77,7 +77,11 @@ export default async function Footer() {
                                 <h3 className="text-sm font-semibold leading-6 text-gray-900">{t('legal')}</h3>
                                 <ul role="list" className="mt-6 space-y-4">
                                     <li><Link href="/privacy" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('privacy')}</Link></li>
-                                    <li><a href="#" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('terms')}</a></li>
+                                    <li><Link href="/terms" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('terms')}</Link></li>
+                                    <li><Link href="/cookies" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('cookies')}</Link></li>
+                                    <li><Link href="/end-user-privacy" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('endUser')}</Link></li>
+                                    <li><Link href="/privacy-requests" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('requests')}</Link></li>
+                                    <li><Link href="/acceptable-use" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('aup')}</Link></li>
                                 </ul>
                             </div>
                         </div>
