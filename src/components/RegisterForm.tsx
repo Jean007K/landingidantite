@@ -3,6 +3,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } from 'react';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
+import PasswordField from '@/components/PasswordField';
+import { isTaxSignupError, publicSignupError } from '@/lib/publicError';
+import { looksCompleteTaxID, taxErrorMessage, validateTaxID } from '@/lib/taxid';
 import { API_URL, DASH_LOGIN_URL, TURNSTILE_SITE_KEY } from '@/lib/urls';
 
 type CountryOption = { code: string; tax_id_label: string; tax_id_placeholder: string };
@@ -18,6 +21,9 @@ const FREE_MAIL = new Set([
 
 const inputClass =
   'block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6';
+
+const invalidInputClass =
+  'block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 ring-1 ring-inset ring-red-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-500 sm:text-sm sm:leading-6';
 
 type FormState = {
   contact_name: string;
@@ -82,6 +88,10 @@ export default function RegisterForm() {
   const [options, setOptions] = useState<OptionsPayload | null>(null);
   const [optionsError, setOptionsError] = useState('');
   const [fieldError, setFieldError] = useState('');
+  const [taxError, setTaxError] = useState('');
+  const [taxTouched, setTaxTouched] = useState(false);
+  const [passwordError, setPasswordError] = useState('');
+  const [confirmError, setConfirmError] = useState('');
   const [busy, setBusy] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState('');
   const widgetRef = useRef<HTMLDivElement>(null);
@@ -106,7 +116,24 @@ export default function RegisterForm() {
 
   const selectedCountry = sortedCountries.find((c) => c.code === form.country_code) || options?.countries.find((c) => c.code === form.country_code);
 
+  const taxHint = useMemo(() => {
+    const example = selectedCountry?.tax_id_placeholder || (form.country_code === 'CL' ? '12.345.678-5' : 'ABC123');
+    const label = selectedCountry?.tax_id_label || t('taxId');
+    if (form.country_code === 'CL') return t('taxHintCL', { example });
+    return t('taxHint', { label, example });
+  }, [form.country_code, selectedCountry, t]);
+
   const set = (patch: Partial<FormState>) => setForm((prev) => ({ ...prev, ...patch }));
+
+  const checkTax = (country: string, value: string, showEmpty = false) => {
+    const code = validateTaxID(country, value);
+    if (code === 'required' && !showEmpty) {
+      setTaxError('');
+      return code;
+    }
+    setTaxError(taxErrorMessage(code, t));
+    return code;
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -168,7 +195,9 @@ export default function RegisterForm() {
     if (form.legal_name.trim().length < 2) return t('errLegal');
     if (form.commercial_name.trim().length < 2) return t('errCommercial');
     if (!form.country_code) return t('errCountry');
-    if (form.tax_id.trim().length < 3) return t('errTax');
+    const taxCode = checkTax(form.country_code, form.tax_id, true);
+    setTaxTouched(true);
+    if (taxCode !== 'ok') return taxErrorMessage(taxCode, t);
     if (!form.industry) return t('errIndustry');
     if (!form.company_size) return t('errSize');
     const digits = (form.phone.match(/\d/g) || []).length;
@@ -184,6 +213,7 @@ export default function RegisterForm() {
       return;
     }
     setFieldError('');
+    setTaxError('');
     setStep(2);
   };
 
@@ -196,14 +226,17 @@ export default function RegisterForm() {
       return;
     }
     const pwd = passwordIssues(form.password, form.email, t);
+    setPasswordError(pwd);
     if (pwd) {
       setFieldError(pwd);
       return;
     }
     if (form.password !== form.password_confirm) {
+      setConfirmError(t('errPasswordMatch'));
       setFieldError(t('errPasswordMatch'));
       return;
     }
+    setConfirmError('');
     if (!form.accepted_terms) {
       setFieldError(t('errTerms'));
       return;
@@ -242,12 +275,20 @@ export default function RegisterForm() {
         data = { message: raw };
       }
       if (!res.ok) {
-        const msg = typeof data.message === 'string' && data.message
+        const rawMsg = typeof data.message === 'string' && data.message
           ? data.message
           : typeof data.error === 'string' && data.error
             ? data.error
             : raw || t('errGeneric');
-        setFieldError(msg);
+        const msg = publicSignupError(rawMsg, t);
+        if (isTaxSignupError(rawMsg) || isTaxSignupError(msg)) {
+          setTaxTouched(true);
+          setTaxError(msg);
+          setFieldError(msg);
+          setStep(1);
+        } else {
+          setFieldError(msg);
+        }
         if (window.turnstile) window.turnstile.reset(widgetId.current || undefined);
         setTurnstileToken('');
         return;
@@ -301,7 +342,17 @@ export default function RegisterForm() {
             <input id="commercial_name" className={inputClass} required value={form.commercial_name} onChange={(e) => set({ commercial_name: e.target.value })} />
           </Field>
           <Field label={t('country')} htmlFor="country_code">
-            <select id="country_code" className={inputClass} required value={form.country_code} onChange={(e) => set({ country_code: e.target.value, tax_id: '' })}>
+            <select
+              id="country_code"
+              className={inputClass}
+              required
+              value={form.country_code}
+              onChange={(e) => {
+                set({ country_code: e.target.value, tax_id: '' });
+                setTaxError('');
+                setTaxTouched(false);
+              }}
+            >
               {sortedCountries.map((c) => (
                 <option key={c.code} value={c.code}>
                   {countryNames.of(c.code) || c.code}
@@ -309,13 +360,32 @@ export default function RegisterForm() {
               ))}
             </select>
           </Field>
-          <Field label={selectedCountry?.tax_id_label || t('taxId')} htmlFor="tax_id">
+          <Field
+            label={selectedCountry?.tax_id_label || t('taxId')}
+            htmlFor="tax_id"
+            hint={taxHint}
+            error={taxTouched ? taxError : ''}
+          >
             <input
               id="tax_id"
-              className={inputClass}
+              className={taxTouched && taxError ? invalidInputClass : inputClass}
               required
+              aria-invalid={taxTouched && Boolean(taxError)}
+              aria-describedby="tax_id_hint"
               value={form.tax_id}
-              onChange={(e) => set({ tax_id: e.target.value })}
+              onChange={(e) => {
+                const value = e.target.value;
+                set({ tax_id: value });
+                if (taxTouched || looksCompleteTaxID(form.country_code, value)) {
+                  checkTax(form.country_code, value);
+                } else {
+                  setTaxError('');
+                }
+              }}
+              onBlur={() => {
+                setTaxTouched(true);
+                checkTax(form.country_code, form.tax_id, true);
+              }}
               placeholder={selectedCountry?.tax_id_placeholder || ''}
             />
           </Field>
@@ -348,11 +418,36 @@ export default function RegisterForm() {
       ) : (
         <form className="space-y-5" onSubmit={submit} noValidate>
           <p className="text-sm text-gray-600">{t('passwordIntro')}</p>
-          <Field label={t('password')} htmlFor="password">
-            <input id="password" type="password" className={inputClass} autoComplete="new-password" required value={form.password} onChange={(e) => set({ password: e.target.value })} />
+          <Field label={t('password')} htmlFor="password" hint={t('passwordHint')} error={passwordError}>
+            <PasswordField
+              id="password"
+              invalid={Boolean(passwordError)}
+              value={form.password}
+              onChange={(value) => {
+                set({ password: value });
+                setPasswordError(value ? passwordIssues(value, form.email, t) : '');
+                if (form.password_confirm) {
+                  setConfirmError(value !== form.password_confirm ? t('errPasswordMatch') : '');
+                }
+              }}
+              required
+              revealLabel={t('showPassword')}
+              hideLabel={t('hidePassword')}
+            />
           </Field>
-          <Field label={t('passwordConfirm')} htmlFor="password_confirm">
-            <input id="password_confirm" type="password" className={inputClass} autoComplete="new-password" required value={form.password_confirm} onChange={(e) => set({ password_confirm: e.target.value })} />
+          <Field label={t('passwordConfirm')} htmlFor="password_confirm" error={confirmError}>
+            <PasswordField
+              id="password_confirm"
+              invalid={Boolean(confirmError)}
+              value={form.password_confirm}
+              onChange={(value) => {
+                set({ password_confirm: value });
+                setConfirmError(value && value !== form.password ? t('errPasswordMatch') : '');
+              }}
+              required
+              revealLabel={t('showPassword')}
+              hideLabel={t('hidePassword')}
+            />
           </Field>
           <label className="flex items-start gap-3 text-sm text-gray-700">
             <input
@@ -392,12 +487,14 @@ function Field({
   label,
   htmlFor,
   hint,
+  error,
   optional,
   children,
 }: {
   label: string;
   htmlFor: string;
   hint?: string;
+  error?: string;
   optional?: boolean;
   children: ReactNode;
 }) {
@@ -408,8 +505,9 @@ function Field({
         {label}
         {optional ? <span className="ml-1 font-normal text-gray-500">({t('optional')})</span> : null}
       </label>
-      {hint ? <p className="mt-1 text-xs text-gray-500">{hint}</p> : null}
+      {hint ? <p id={`${htmlFor}_hint`} className="mt-1 text-xs text-gray-500">{hint}</p> : null}
       <div className="mt-2">{children}</div>
+      {error ? <p className="mt-1.5 text-sm text-red-700" role="alert">{error}</p> : null}
     </div>
   );
 }
