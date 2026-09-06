@@ -20,10 +20,10 @@ const FREE_MAIL = new Set([
 ]);
 
 const inputClass =
-  'block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6';
+  'block h-9 w-full rounded-lg border-0 px-3 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary';
 
 const invalidInputClass =
-  'block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 ring-1 ring-inset ring-red-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-500 sm:text-sm sm:leading-6';
+  'block h-9 w-full rounded-lg border-0 px-3 text-sm text-gray-900 ring-1 ring-inset ring-red-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-500';
 
 type FormState = {
   contact_name: string;
@@ -304,36 +304,36 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-xl">
-      <ol className="mb-8 grid grid-cols-2 gap-3 text-sm" aria-label={t('stepsLabel')}>
-        <li className={`rounded-md px-3 py-2 ring-1 ${step === 1 ? 'bg-primary text-white ring-primary' : 'bg-white text-gray-700 ring-gray-200'}`}>
-          <span className="block text-[11px] font-semibold uppercase tracking-wide opacity-80">{t('step')} 1</span>
+    <div className="mx-auto w-full">
+      <ol className="mb-4 grid grid-cols-2 gap-2 text-sm" aria-label={t('stepsLabel')}>
+        <li className={`rounded-lg px-3 py-1.5 ring-1 ${step === 1 ? 'bg-primary text-white ring-primary' : 'bg-white text-gray-700 ring-gray-200'}`}>
+          <span className="text-[10px] font-semibold uppercase tracking-wide opacity-80">{t('step')} 1 · </span>
           {t('stepCompany')}
         </li>
-        <li className={`rounded-md px-3 py-2 ring-1 ${step === 2 ? 'bg-primary text-white ring-primary' : 'bg-white text-gray-700 ring-gray-200'}`}>
-          <span className="block text-[11px] font-semibold uppercase tracking-wide opacity-80">{t('step')} 2</span>
+        <li className={`rounded-lg px-3 py-1.5 ring-1 ${step === 2 ? 'bg-primary text-white ring-primary' : 'bg-white text-gray-700 ring-gray-200'}`}>
+          <span className="text-[10px] font-semibold uppercase tracking-wide opacity-80">{t('step')} 2 · </span>
           {t('stepPassword')}
         </li>
       </ol>
 
       {optionsError && (
-        <p className="mb-4 rounded-md bg-red-50 px-3 py-2 text-sm text-red-800" role="alert">
+        <p className="mb-3 rounded-lg bg-red-50 px-3 py-2 text-xs text-red-800" role="alert">
           {optionsError}
         </p>
       )}
       {fieldError && (
-        <p className="mb-4 rounded-md bg-red-50 px-3 py-2 text-sm text-red-800" role="alert">
+        <p className="mb-3 rounded-lg bg-red-50 px-3 py-2 text-xs text-red-800" role="alert">
           {fieldError}
         </p>
       )}
 
       {step === 1 ? (
-        <form className="space-y-5" onSubmit={goStep2} noValidate>
+        <form className="grid grid-cols-1 gap-x-3 gap-y-3 sm:grid-cols-2" onSubmit={goStep2} noValidate>
           <Field label={t('contactName')} htmlFor="contact_name">
             <input id="contact_name" className={inputClass} autoComplete="name" required value={form.contact_name} onChange={(e) => set({ contact_name: e.target.value })} />
           </Field>
-          <Field label={t('email')} htmlFor="email" hint={t('emailHint')}>
-            <input id="email" type="email" className={inputClass} autoComplete="email" required value={form.email} onChange={(e) => set({ email: e.target.value })} placeholder="nombre@empresa.com" />
+          <Field label={t('email')} htmlFor="email">
+            <input id="email" type="email" className={inputClass} autoComplete="email" required title={t('emailHint')} value={form.email} onChange={(e) => set({ email: e.target.value })} placeholder="nombre@empresa.com" />
           </Field>
           <Field label={t('legalName')} htmlFor="legal_name">
             <input id="legal_name" className={inputClass} autoComplete="organization" required value={form.legal_name} onChange={(e) => set({ legal_name: e.target.value })} />
@@ -411,13 +411,13 @@ export default function RegisterForm() {
               ))}
             </select>
           </Field>
-          <button type="submit" className="w-full rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+          <button type="submit" className="sm:col-span-2 h-10 w-full rounded-lg bg-primary px-3.5 text-sm font-semibold text-white hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
             {t('continue')}
           </button>
         </form>
       ) : (
-        <form className="space-y-5" onSubmit={submit} noValidate>
-          <p className="text-sm text-gray-600">{t('passwordIntro')}</p>
+        <form className="grid grid-cols-1 gap-3 sm:grid-cols-2" onSubmit={submit} noValidate>
+          <p className="sm:col-span-2 text-sm text-gray-600">{t('passwordIntro')}</p>
           <Field label={t('password')} htmlFor="password" hint={t('passwordHint')} error={passwordError}>
             <PasswordField
               id="password"
@@ -449,7 +449,7 @@ export default function RegisterForm() {
               hideLabel={t('hidePassword')}
             />
           </Field>
-          <label className="flex items-start gap-3 text-sm text-gray-700">
+          <label className="sm:col-span-2 flex items-start gap-3 text-sm text-gray-700">
             <input
               type="checkbox"
               className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
@@ -463,19 +463,19 @@ export default function RegisterForm() {
               <Link href="/terms" className="font-semibold text-primary hover:underline">{t('termsLink')}</Link>.
             </span>
           </label>
-          {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="min-h-[65px]" /> : null}
-          <div className="flex gap-3">
-            <button type="button" onClick={() => { setFieldError(''); setStep(1); }} className="flex-1 rounded-md px-3.5 py-2.5 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="sm:col-span-2 min-h-[65px]" /> : null}
+          <div className="sm:col-span-2 flex gap-3">
+            <button type="button" onClick={() => { setFieldError(''); setStep(1); }} className="h-10 flex-1 rounded-lg px-3.5 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
               {t('back')}
             </button>
-            <button type="submit" disabled={busy} className="flex-[2] rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800 disabled:opacity-60">
+            <button type="submit" disabled={busy} className="h-10 flex-[2] rounded-lg bg-primary px-3.5 text-sm font-semibold text-white hover:bg-blue-800 disabled:opacity-60">
               {busy ? t('submitting') : t('submit')}
             </button>
           </div>
         </form>
       )}
 
-      <p className="mt-8 text-center text-sm text-gray-600">
+      <p className="mt-4 text-center text-sm text-gray-600">
         {t('hasAccount')}{' '}
         <a href={DASH_LOGIN_URL} className="font-semibold text-primary hover:underline">{t('signIn')}</a>
       </p>
@@ -500,14 +500,14 @@ function Field({
 }) {
   const t = useTranslations('registerPage');
   return (
-    <div>
-      <label htmlFor={htmlFor} className="block text-sm font-semibold leading-6 text-gray-900">
+    <div className="min-w-0">
+      <label htmlFor={htmlFor} className="block text-xs font-semibold leading-5 text-gray-900">
         {label}
         {optional ? <span className="ml-1 font-normal text-gray-500">({t('optional')})</span> : null}
       </label>
-      {hint ? <p id={`${htmlFor}_hint`} className="mt-1 text-xs text-gray-500">{hint}</p> : null}
-      <div className="mt-2">{children}</div>
-      {error ? <p className="mt-1.5 text-sm text-red-700" role="alert">{error}</p> : null}
+      <div className="mt-1">{children}</div>
+      {hint ? <p id={`${htmlFor}_hint`} className="mt-1 line-clamp-1 text-[11px] leading-4 text-gray-500">{hint}</p> : null}
+      {error ? <p className="mt-1 text-xs text-red-700" role="alert">{error}</p> : null}
     </div>
   );
 }

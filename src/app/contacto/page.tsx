@@ -15,7 +15,7 @@ export default async function ContactoPage() {
 
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">{t('title')}</h2>

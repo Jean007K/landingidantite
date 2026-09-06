@@ -12,10 +12,10 @@ export default async function UseCasesSection() {
     const cases = t.raw('items') as CaseItem[];
 
     return (
-        <section className="py-24 bg-primary text-white">
+        <section className="py-14 sm:py-16 bg-primary text-white">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">{t('title')}</h2>
+                <div className="text-center mb-10">
+                    <h2 className="text-2xl font-bold tracking-tight sm:text-3xl text-white">{t('title')}</h2>
                     <p className="mt-4 text-lg text-blue-100 max-w-2xl mx-auto">
                         {t('sub')}
                     </p>

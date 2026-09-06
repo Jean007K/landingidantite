@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm border-b border-gray-100">
-      <nav className="container mx-auto px-6 py-4" aria-label="Global">
+      <nav className="container mx-auto px-4 py-3 sm:px-6" aria-label="Global">
         <div className="flex items-center justify-between">
           <div className="flex lg:flex-1 items-center">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center">
@@ -33,7 +33,7 @@ export default function Header() {
                 alt="EMVERAX"
                 width={148}
                 height={32}
-                className="h-8 w-auto"
+                className="h-7 w-auto"
                 priority
               />
             </Link>

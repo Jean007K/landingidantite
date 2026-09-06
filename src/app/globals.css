@@ -12,4 +12,8 @@
     @apply bg-white antialiased;
     color: #0F172A;
   }
+
+  body.hide-site-footer footer {
+    display: none;
+  }
 }

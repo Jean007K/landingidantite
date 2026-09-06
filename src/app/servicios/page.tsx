@@ -30,7 +30,7 @@ export default async function ServiciosPage() {
   const features = t.raw('items') as Feature[];
 
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-600">{t('kicker')}</h2>

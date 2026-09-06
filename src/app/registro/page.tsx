@@ -15,32 +15,32 @@ export default async function RegistroPage() {
   const t = await getTranslations('registerPage');
 
   return (
-    <div className="bg-white">
-      <div className="lg:grid lg:min-h-[calc(100vh-5rem)] lg:grid-cols-2">
+    <div className="bg-white lg:h-[calc(100dvh-4rem)] lg:overflow-hidden">
+      <div className="lg:grid lg:h-full lg:grid-cols-[minmax(280px,0.9fr)_minmax(520px,1.15fr)]">
         <aside className="relative isolate overflow-hidden bg-[#0B1220]">
-          <div className="relative h-56 w-full sm:h-72 lg:absolute lg:inset-0 lg:h-full">
+          <div className="relative h-40 w-full sm:h-52 lg:absolute lg:inset-0 lg:h-full">
             <Image
               src="/registro-verificacion-premium.png"
               alt={t('visualAlt')}
               fill
               priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[center_22%]"
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              className="object-cover object-[center_28%] lg:object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/35 to-[#0B1220]/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/25 to-transparent" />
           </div>
-          <div className="relative hidden px-10 pb-12 pt-10 text-white lg:absolute lg:inset-x-0 lg:bottom-0 lg:block">
-            <p className="text-sm font-medium text-blue-200">{t('visualKicker')}</p>
-            <p className="mt-3 max-w-md text-3xl font-semibold tracking-tight">{t('visualTitle')}</p>
-            <p className="mt-3 max-w-md text-sm leading-6 text-slate-200">{t('visualBody')}</p>
+          <div className="relative hidden px-8 pb-10 pt-8 text-white lg:absolute lg:inset-x-0 lg:bottom-0 lg:block">
+            <p className="text-[11px] font-medium uppercase tracking-wide text-blue-200">{t('visualKicker')}</p>
+            <p className="mt-1.5 max-w-sm text-xl font-semibold tracking-tight">{t('visualTitle')}</p>
+            <p className="mt-1.5 max-w-sm text-xs leading-5 text-slate-200">{t('visualBody')}</p>
           </div>
         </aside>
 
-        <div className="flex items-start justify-center px-6 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-16">
-          <div className="w-full max-w-xl">
-            <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">{t('title')}</h1>
-            <p className="mt-3 text-base leading-7 text-gray-600 sm:text-lg">{t('body')}</p>
-            <div className="mt-8">
+        <div className="flex min-h-0 items-start justify-center overflow-y-auto px-4 py-6 sm:px-8 sm:py-8 lg:items-center lg:px-10 lg:py-6">
+          <div className="w-full max-w-2xl">
+            <h1 className="text-2xl font-bold tracking-tight text-primary sm:text-[1.7rem]">{t('title')}</h1>
+            <p className="mt-1.5 text-sm leading-6 text-gray-600">{t('body')}</p>
+            <div className="mt-5">
               <RegisterForm />
             </div>
           </div>

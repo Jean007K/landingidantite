@@ -6,11 +6,11 @@ export default async function SecuritySection() {
     const items = t.raw('items') as string[];
 
     return (
-        <section className="py-24 bg-white">
+        <section className="py-14 sm:py-16 bg-white">
             <div className="container mx-auto px-6">
                 <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
                     <div className="lg:col-span-5">
-                        <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl mb-6">
+                        <h2 className="text-2xl font-bold tracking-tight text-primary sm:text-3xl mb-4">
                             {t('title')}
                         </h2>
                         <p className="text-lg text-gray-600 mb-8">

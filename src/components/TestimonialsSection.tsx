@@ -11,9 +11,9 @@ export default async function TestimonialsSection() {
     const items = t.raw('items') as Testimonial[];
 
     return (
-        <section className="py-24 bg-gray-50 overflow-hidden">
+        <section className="py-14 sm:py-16 bg-gray-50 overflow-hidden">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold tracking-tight text-center text-primary sm:text-4xl mb-16">
+                <h2 className="text-2xl font-bold tracking-tight text-center text-primary sm:text-3xl mb-10">
                     {t('title')}
                 </h2>
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">

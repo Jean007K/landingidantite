@@ -6,8 +6,15 @@ import { getLocale, getMessages } from 'next-intl/server';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import HideFooterOn from '@/components/HideFooterOn';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover' as const,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://emverax.com'),
@@ -53,8 +60,9 @@ export default async function RootLayout({
           strategy="afterInteractive"
         />
         <NextIntlClientProvider messages={messages}>
+          <HideFooterOn prefix="/registro" />
           <Header />
-          <main className="flex-grow pt-20">{children}</main>
+          <main className="flex-grow pt-16">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

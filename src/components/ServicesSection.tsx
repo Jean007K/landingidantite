@@ -22,10 +22,10 @@ export default async function ServicesSection() {
     const services = t.raw('items') as ServiceItem[];
 
     return (
-        <section className="py-24 bg-gray-50">
+        <section className="py-14 sm:py-16 bg-gray-50">
             <div className="container mx-auto px-6">
-                <div className="mx-auto max-w-2xl text-center mb-16">
-                    <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">{t('title')}</h2>
+                <div className="mx-auto max-w-2xl text-center mb-10">
+                    <h2 className="text-2xl font-bold tracking-tight text-primary sm:text-3xl">{t('title')}</h2>
                     <p className="mt-4 text-lg leading-8 text-gray-600">
                         {t('sub')}
                     </p>
@@ -34,7 +34,7 @@ export default async function ServicesSection() {
                     {services.map((feature) => {
                         const Icon = ICONS[feature.id] ?? ScanFace;
                         return (
-                        <div key={feature.id} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div key={feature.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
                                 <Icon className="h-6 w-6" aria-hidden="true" />
                             </div>
