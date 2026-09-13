@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import PasswordField from '@/components/PasswordField';
 import { isTaxSignupError, publicSignupError } from '@/lib/publicError';
-import { looksCompleteTaxID, taxErrorMessage, validateTaxID } from '@/lib/taxid';
+import { formatChileRUT, looksCompleteTaxID, taxErrorMessage, validateTaxID } from '@/lib/taxid';
 import { API_URL, DASH_LOGIN_URL, TURNSTILE_SITE_KEY } from '@/lib/urls';
 
 type CountryOption = { code: string; tax_id_label: string; tax_id_placeholder: string };
@@ -131,7 +131,7 @@ export default function RegisterForm() {
       setTaxError('');
       return code;
     }
-    setTaxError(taxErrorMessage(code, t));
+    setTaxError(taxErrorMessage(code, t, value));
     return code;
   };
 
@@ -197,7 +197,7 @@ export default function RegisterForm() {
     if (!form.country_code) return t('errCountry');
     const taxCode = checkTax(form.country_code, form.tax_id, true);
     setTaxTouched(true);
-    if (taxCode !== 'ok') return taxErrorMessage(taxCode, t);
+    if (taxCode !== 'ok') return taxErrorMessage(taxCode, t, form.tax_id);
     if (!form.industry) return t('errIndustry');
     if (!form.company_size) return t('errSize');
     const digits = (form.phone.match(/\d/g) || []).length;
@@ -257,7 +257,7 @@ export default function RegisterForm() {
           legal_name: form.legal_name.trim(),
           commercial_name: form.commercial_name.trim(),
           country_code: form.country_code,
-          tax_id: form.tax_id.trim(),
+          tax_id: form.country_code === 'CL' ? formatChileRUT(form.tax_id) : form.tax_id.trim(),
           industry: form.industry,
           phone: form.phone.trim(),
           website: form.website.trim(),
@@ -384,7 +384,15 @@ export default function RegisterForm() {
               }}
               onBlur={() => {
                 setTaxTouched(true);
-                checkTax(form.country_code, form.tax_id, true);
+                let value = form.tax_id;
+                if (form.country_code === 'CL' && value.trim()) {
+                  const formatted = formatChileRUT(value);
+                  if (formatted !== value) {
+                    set({ tax_id: formatted });
+                    value = formatted;
+                  }
+                }
+                checkTax(form.country_code, value, true);
               }}
               placeholder={selectedCountry?.tax_id_placeholder || ''}
             />
@@ -506,7 +514,7 @@ function Field({
         {optional ? <span className="ml-1 font-normal text-gray-500">({t('optional')})</span> : null}
       </label>
       <div className="mt-1">{children}</div>
-      {hint ? <p id={`${htmlFor}_hint`} className="mt-1 line-clamp-1 text-[11px] leading-4 text-gray-500">{hint}</p> : null}
+      {hint ? <p id={`${htmlFor}_hint`} className="mt-1 text-[11px] leading-4 text-gray-500">{hint}</p> : null}
       {error ? <p className="mt-1 text-xs text-red-700" role="alert">{error}</p> : null}
     </div>
   );
