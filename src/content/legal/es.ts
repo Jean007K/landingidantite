@@ -231,6 +231,8 @@ export const cookiesDoc: LegalDoc = {
         'Panel de clientes: cookies necesarias para mantener la sesión iniciada y proteger el acceso. Sin ellas el panel no puede funcionar.',
         'Verificación: el flujo en el que una persona fotografía su documento no usa cookies de cuenta ni de publicidad.',
       ],
+    },
+    {
       paragraphs: [
         'No usamos cookies de redes sociales ni de publicidad de terceros.',
       ],
@@ -296,6 +298,8 @@ export const requestsDoc: LegalDoc = {
         'El nombre de esa empresa, si lo recuerda.',
         'Qué solicita: acceso, corrección o eliminación.',
       ],
+    },
+    {
       paragraphs: [
         'No envíe fotografías de su documento en el primer correo. Si las necesitamos para confirmar que es usted, se las pediremos.',
       ],
