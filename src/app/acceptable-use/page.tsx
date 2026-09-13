@@ -4,7 +4,7 @@ import { aupDoc } from '@/content/legal/es';
 
 export const metadata: Metadata = {
   title: 'Uso aceptable | Emverax',
-  description: 'Límites de uso del servicio de verificación: no menores, no 1:N, no sellos no obtenidos.',
+  description: 'Uso permitido del servicio de verificación de identidad de EMVERAX.',
 };
 
 export default function AcceptableUsePage() {

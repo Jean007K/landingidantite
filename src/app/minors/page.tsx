@@ -4,7 +4,7 @@ import { minorsDoc } from '@/content/legal/es';
 
 export const metadata: Metadata = {
   title: 'Aviso para menores | Emverax',
-  description: 'El servicio no está dirigido a menores de 18 años.',
+  description: 'El servicio de verificación de EMVERAX es para personas de 18 años o más.',
 };
 
 export default function MinorsPage() {

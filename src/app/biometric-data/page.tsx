@@ -4,7 +4,7 @@ import { biometricDoc } from '@/content/legal/es';
 
 export const metadata: Metadata = {
   title: 'Aviso biométrico | Emverax',
-  description: 'Cómo tratamos plantillas faciales (embeddings) y por qué no son lo mismo que una foto JPEG.',
+  description: 'Cómo EMVERAX trata la plantilla facial en una verificación de identidad.',
 };
 
 export default function BiometricPage() {

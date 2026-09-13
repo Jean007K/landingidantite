@@ -4,7 +4,7 @@ import { privacyDoc } from '@/content/legal/es';
 
 export const metadata: Metadata = {
   title: 'Política de privacidad | Emverax',
-  description: 'Cómo tratamos los datos del sitio corporativo y de las cuentas del panel. La verificación de usuarios finales tiene aviso propio.',
+  description: 'Cómo EMVERAX trata los datos del sitio y de las cuentas del panel.',
 };
 
 export default function PrivacyPage() {

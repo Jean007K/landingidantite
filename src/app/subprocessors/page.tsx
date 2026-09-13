@@ -3,8 +3,8 @@ import LegalPage from '@/components/LegalPage';
 import { subprocessorsDoc } from '@/content/legal/es';
 
 export const metadata: Metadata = {
-  title: 'Subencargados | Emverax',
-  description: 'Lista de subencargados y derecho de objeción de 30 días.',
+  title: 'Proveedores de infraestructura | Emverax',
+  description: 'Proveedores que ayudan a EMVERAX a operar el servicio.',
 };
 
 export default function SubprocessorsPage() {

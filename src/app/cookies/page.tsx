@@ -4,7 +4,7 @@ import { cookiesDoc } from '@/content/legal/es';
 
 export const metadata: Metadata = {
   title: 'Política de cookies | Emverax',
-  description: 'Cookies y tecnologías similares en el sitio, el panel y la captura alojada.',
+  description: 'Qué cookies usa EMVERAX en el sitio y en el panel de clientes.',
 };
 
 export default function CookiesPage() {

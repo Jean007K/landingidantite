@@ -4,7 +4,7 @@ import { requestsDoc } from '@/content/legal/es';
 
 export const metadata: Metadata = {
   title: 'Solicitudes y eliminación de datos | Emverax',
-  description: 'Cómo ejercer derechos de acceso, rectificación o eliminación. El titular pide primero al Cliente.',
+  description: 'Cómo pedir acceso, corrección o eliminación de sus datos. Escriba a privacy@emverax.com.',
 };
 
 export default function PrivacyRequestsPage() {
