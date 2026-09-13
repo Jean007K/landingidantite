@@ -197,9 +197,9 @@ export const termsDoc: LegalDoc = {
       ],
     },
     {
-      title: 'Ley aplicable',
+      title: 'Contacto',
       paragraphs: [
-        'Estos términos se rigen por la ley de la República de Chile. Las notificaciones se envían a privacy@emverax.com.',
+        'Las notificaciones se envían a privacy@emverax.com.',
       ],
     },
   ],
