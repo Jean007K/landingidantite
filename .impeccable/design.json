@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T16:57:38.926Z",
+  "title": "Design System: EMVERAX Documentation",
+  "extensions": {
+    "colorMeta": {
+      "emverax-blue": {
+        "role": "primary",
+        "displayName": "Azul EMVERAX",
+        "canonical": "#0046FB",
+        "tonalRamp": [
+          "oklch(24% 0.10 262)",
+          "oklch(34% 0.17 262)",
+          "oklch(44% 0.24 262)",
+          "#003CCF",
+          "#0046FB",
+          "#6B94FF",
+          "#CFE0FF",
+          "#EAF1FF"
+        ]
+      },
+      "emverax-blue-deep": {
+        "role": "primary",
+        "displayName": "Azul EMVERAX Profundo",
+        "canonical": "#003CCF",
+        "tonalRamp": [
+          "oklch(24% 0.10 262)",
+          "oklch(34% 0.17 262)",
+          "oklch(44% 0.24 262)",
+          "#003CCF",
+          "#0046FB",
+          "#6B94FF",
+          "#CFE0FF",
+          "#EAF1FF"
+        ]
+      },
+      "blue-wash": {
+        "role": "primary",
+        "displayName": "Lavado de Navegación",
+        "canonical": "#EAF1FF",
+        "tonalRamp": [
+          "oklch(24% 0.10 262)",
+          "oklch(34% 0.17 262)",
+          "oklch(44% 0.24 262)",
+          "#003CCF",
+          "#0046FB",
+          "#6B94FF",
+          "#CFE0FF",
+          "#EAF1FF"
+        ]
+      },
+      "selection-wash": {
+        "role": "primary",
+        "displayName": "Lavado de Selección",
+        "canonical": "#CFE0FF",
+        "tonalRamp": [
+          "oklch(24% 0.10 262)",
+          "oklch(34% 0.17 262)",
+          "oklch(44% 0.24 262)",
+          "#003CCF",
+          "#0046FB",
+          "#6B94FF",
+          "#CFE0FF",
+          "#EAF1FF"
+        ]
+      },
+      "focus-wash": {
+        "role": "primary",
+        "displayName": "Halo de Foco",
+        "canonical": "#D6E2FF",
+        "tonalRamp": [
+          "oklch(24% 0.10 262)",
+          "oklch(34% 0.17 262)",
+          "oklch(44% 0.24 262)",
+          "#003CCF",
+          "#0046FB",
+          "#6B94FF",
+          "#CFE0FF",
+          "#EAF1FF"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Papel Operacional",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#0F172A",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#CBD5E1",
+          "#FFFFFF"
+        ]
+      },
+      "surface-muted": {
+        "role": "neutral",
+        "displayName": "Papel Frío",
+        "canonical": "#F8FAFC",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#0F172A",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#CBD5E1",
+          "#FFFFFF"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Regla Fría",
+        "canonical": "#E2E8F0",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#0F172A",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#CBD5E1",
+          "#FFFFFF"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Regla Firme",
+        "canonical": "#CBD5E1",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#0F172A",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#CBD5E1",
+          "#FFFFFF"
+        ]
+      },
+      "heading": {
+        "role": "neutral",
+        "displayName": "Titular Nítido",
+        "canonical": "#020617",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#0F172A",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#CBD5E1",
+          "#FFFFFF"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta Técnica",
+        "canonical": "#0F172A",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#0F172A",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#CBD5E1",
+          "#FFFFFF"
+        ]
+      },
+      "body": {
+        "role": "neutral",
+        "displayName": "Texto de Lectura",
+        "canonical": "#475569",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#0F172A",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#CBD5E1",
+          "#FFFFFF"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Texto Auxiliar",
+        "canonical": "#64748B",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#0F172A",
+          "#334155",
+          "#475569",
+          "#64748B",
+          "#CBD5E1",
+          "#FFFFFF"
+        ]
+      },
+      "code-surface": {
+        "role": "neutral",
+        "displayName": "Navy de Código",
+        "canonical": "#0B1220",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#111C30",
+          "#1E293B",
+          "#334155",
+          "#64748B",
+          "#94A3B8",
+          "#DCE7F7"
+        ]
+      },
+      "code-text": {
+        "role": "neutral",
+        "displayName": "Código de Hielo",
+        "canonical": "#DCE7F7",
+        "tonalRamp": [
+          "#020617",
+          "#0B1220",
+          "#111C30",
+          "#1E293B",
+          "#334155",
+          "#64748B",
+          "#94A3B8",
+          "#DCE7F7"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "H1 de escritorio; 44px, peso 700, interlineado 1.1 y tracking -0.035em."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "H1 móvil; 36px con el mismo peso y compresión del display."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Encabezados de sección de 24px que estructuran el artículo."
+      },
+      "body-large": {
+        "displayName": "Body Large",
+        "purpose": "Descripción inicial de 18px, con lectura máxima de 66ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prosa y listas de 16px, interlineado amplio y ancho máximo de 72ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Acciones y navegación de 14px semibold."
+      },
+      "eyebrow": {
+        "displayName": "Eyebrow",
+        "purpose": "Categorías y versión de 11px, mayúsculas y tracking 0.12em."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Ejemplos, rutas y métodos en la pila monoespaciada del sistema."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Descripciones compactas de 14px en endpoints, resultados y callouts."
+      }
+    },
+    "shadows": [
+      {
+        "name": "control-low",
+        "value": "0 1px 2px rgb(0 0 0 / 0.05)",
+        "purpose": "Separación mínima para botones accionables sobre papel blanco."
+      },
+      {
+        "name": "code-contained",
+        "value": "0 14px 34px -22px rgba(15,23,42,0.8)",
+        "purpose": "Contiene los ejemplos navy sin convertirlos en tarjetas promocionales."
+      },
+      {
+        "name": "search-overlay",
+        "value": "0 18px 50px -18px rgba(15,23,42,0.35)",
+        "purpose": "Eleva temporalmente los resultados de búsqueda."
+      },
+      {
+        "name": "drawer-modal",
+        "value": "0 25px 50px -12px rgb(15 23 42 / 0.25)",
+        "purpose": "Separa el cajón móvil del velo modal."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Cambio estándar de color, borde y foco en controles."
+      },
+      {
+        "name": "directional-shift",
+        "value": "translateX(4px) over 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Desplazamiento breve de flechas en enlaces direccionales."
+      },
+      {
+        "name": "copy-confirmation",
+        "value": "1800ms",
+        "purpose": "Duración del estado Copiado antes de restaurar la acción."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "2xl",
+        "value": "1536px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal única para avanzar en el flujo recomendado.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Crear una sesión<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-primary{display:inline-flex;min-height:44px;align-items:center;gap:8px;border:0;border-radius:8px;background:var(--color-primary,#0046FB);color:#fff;padding:10px 16px;font:600 14px/20px Inter,ui-sans-serif,system-ui,sans-serif;box-shadow:0 1px 2px rgb(0 0 0/.05);cursor:pointer;transition:background-color 150ms cubic-bezier(.4,0,.2,1),transform 150ms cubic-bezier(.4,0,.2,1)}.ds-btn-primary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-btn-primary:hover{background:#003CCF}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:0;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--color-primary,#0046FB)}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acción alternativa con el mismo peso tipográfico y menor énfasis cromático.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Configurar webhooks</button>",
+      "css": ".ds-btn-secondary{display:inline-flex;min-height:44px;align-items:center;border:1px solid #CBD5E1;border-radius:8px;background:#fff;color:#1E293B;padding:10px 16px;font:600 14px/20px Inter,ui-sans-serif,system-ui,sans-serif;box-shadow:0 1px 2px rgb(0 0 0/.05);cursor:pointer;transition:background-color 150ms cubic-bezier(.4,0,.2,1),border-color 150ms cubic-bezier(.4,0,.2,1)}.ds-btn-secondary:hover{border-color:#94A3B8;background:#F8FAFC}.ds-btn-secondary:active{background:#F1F5F9}.ds-btn-secondary:focus-visible{outline:0;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--color-primary,#0046FB)}"
+    },
+    {
+      "name": "Documentation Search",
+      "kind": "input",
+      "refersTo": "search-input",
+      "description": "Búsqueda local compacta con atajo visible en escritorio.",
+      "html": "<label class=\"ds-search\"><span class=\"ds-search-label\">Buscar en la documentación</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg><input type=\"search\" placeholder=\"Buscar\"/><kbd>Ctrl K</kbd></label>",
+      "css": ".ds-search{position:relative;display:block;width:min(100%,448px);font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-search-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.ds-search svg{position:absolute;left:12px;top:10px;width:16px;height:16px;fill:none;stroke:#64748B;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}.ds-search input{width:100%;height:36px;border:1px solid #E2E8F0;border-radius:8px;background:#F8FAFC;color:#0F172A;padding:0 56px 0 36px;font:400 14px/20px Inter,ui-sans-serif,system-ui,sans-serif;outline:0;transition:background-color 150ms cubic-bezier(.4,0,.2,1),border-color 150ms cubic-bezier(.4,0,.2,1),box-shadow 150ms cubic-bezier(.4,0,.2,1)}.ds-search input::placeholder{color:#475569}.ds-search input:hover{border-color:#CBD5E1}.ds-search input:focus{border-color:#6B94FF;background:#fff;box-shadow:0 0 0 2px #D6E2FF}.ds-search kbd{position:absolute;right:10px;top:8px;border:1px solid #CBD5E1;border-radius:4px;background:#fff;color:#475569;padding:2px 6px;font:600 10px/14px Inter,ui-sans-serif,system-ui,sans-serif}"
+    },
+    {
+      "name": "API Version Chip",
+      "kind": "chip",
+      "refersTo": "api-version-chip",
+      "description": "Metadato no interactivo que fija la versión contractual visible.",
+      "html": "<span class=\"ds-api-chip\">API v2</span>",
+      "css": ".ds-api-chip{display:inline-flex;align-items:center;border-radius:6px;background:#EAF1FF;color:#003CCF;padding:4px 8px;font:700 11px/14px Inter,ui-sans-serif,system-ui,sans-serif;white-space:nowrap}"
+    },
+    {
+      "name": "Active Navigation Item",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Marca la posición actual sin aumentar la densidad del árbol lateral.",
+      "html": "<a class=\"ds-nav-active\" href=\"#\" aria-current=\"page\">Introducción</a>",
+      "css": ".ds-nav-active{display:block;width:200px;border-radius:8px;background:#EAF1FF;color:#003CCF;padding:8px 12px;text-decoration:none;font:600 14px/20px Inter,ui-sans-serif,system-ui,sans-serif;transition:background-color 150ms cubic-bezier(.4,0,.2,1)}.ds-nav-active:hover{background:#DCE8FF}.ds-nav-active:focus-visible{outline:0;box-shadow:0 0 0 2px var(--color-primary,#0046FB)}"
+    },
+    {
+      "name": "Code Block",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Ejemplo copiable y ancla navy del manual técnico.",
+      "html": "<section class=\"ds-code\"><header><span>Solicitud</span><small>BASH</small><button type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>Copiar</button></header><pre><code>curl --request POST \\\n  --url https://api.emverax.com/v2/sessions \\\n  --header 'X-API-Key: emv_sandbox_REEMPLAZA_ESTA_CLAVE'</code></pre></section>",
+      "css": ".ds-code{width:min(100%,640px);overflow:hidden;border-radius:12px;background:#0B1220;color:#DCE7F7;box-shadow:0 14px 34px -22px rgba(15,23,42,.8);font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-code header{display:flex;align-items:center;gap:12px;border-bottom:1px solid rgb(255 255 255/.1);padding:10px 16px}.ds-code header>span{color:#CBD5E1;font-size:12px;font-weight:500}.ds-code small{color:#64748B;font-size:11px;font-weight:600;letter-spacing:.08em}.ds-code button{display:inline-flex;min-height:32px;align-items:center;gap:6px;margin-left:auto;border:0;border-radius:6px;background:transparent;color:#CBD5E1;padding:0 10px;font:500 12px/16px Inter,ui-sans-serif,system-ui,sans-serif;cursor:pointer}.ds-code button:hover{background:rgb(255 255 255/.1);color:#fff}.ds-code button:focus-visible{outline:0;box-shadow:0 0 0 2px #4DA3FF}.ds-code button svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-code pre{margin:0;overflow:auto;padding:20px;color:#DCE7F7;font:400 13px/24px ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}"
+    },
+    {
+      "name": "POST Endpoint Row",
+      "kind": "custom",
+      "refersTo": "endpoint-post",
+      "description": "Contrato de método y ruta presentado como regla abierta, no como tarjeta.",
+      "html": "<div class=\"ds-endpoint\"><div><span>POST</span><code>/v2/sessions</code></div><p>Crea una sesión en el entorno asociado a la clave API.</p></div>",
+      "css": ".ds-endpoint{width:min(100%,640px);border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0;padding:16px 0;font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-endpoint>div{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.ds-endpoint span{border-radius:6px;background:var(--color-primary,#0046FB);color:#fff;padding:4px 10px;font:700 12px/16px ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.ds-endpoint code{color:#0F172A;font:600 14px/20px ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.ds-endpoint p{margin:12px 0 0;color:#475569;font-size:14px;line-height:24px}"
+    },
+    {
+      "name": "Information Callout",
+      "kind": "card",
+      "refersTo": "callout-info",
+      "description": "Contexto importante que informa sin interrumpir el recorrido.",
+      "html": "<aside class=\"ds-callout\" role=\"note\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4M12 8h.01\"/></svg><div><strong>Tu empresa conserva la decisión final</strong><p>EMVERAX entrega señales de verificación y tu organización aplica sus propias políticas.</p></div></aside>",
+      "css": ".ds-callout{display:flex;width:min(100%,640px);gap:12px;border:1px solid #BFDBFE;border-radius:12px;background:rgb(239 246 255/.7);color:#172554;padding:16px;font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-callout>svg{flex:0 0 auto;width:20px;height:20px;margin-top:2px;fill:none;stroke:var(--color-primary,#0046FB);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-callout strong{display:block;font-size:14px;line-height:20px}.ds-callout p{margin:4px 0 0;font-size:14px;line-height:24px;opacity:.85}"
+    },
+    {
+      "name": "Documentation Drawer",
+      "kind": "nav",
+      "refersTo": "docs-drawer",
+      "description": "Navegación modal accesible para viewports inferiores a 1024px.",
+      "html": "<div class=\"ds-drawer-stage\"><div class=\"ds-drawer-veil\"></div><aside class=\"ds-drawer\" aria-label=\"Navegación de documentación\"><header><strong>Documentación</strong><button type=\"button\" aria-label=\"Cerrar navegación\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg></button></header><p>COMENZAR</p><nav><a class=\"ds-drawer-current\" href=\"#\">Introducción</a><a href=\"#\">Primeros pasos</a><a href=\"#\">Flujo de verificación</a></nav></aside></div>",
+      "css": ".ds-drawer-stage{position:relative;width:min(100%,420px);height:360px;overflow:hidden;background:#F8FAFC;font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-drawer-veil{position:absolute;inset:0;background:rgb(2 6 23/.35)}.ds-drawer{position:absolute;inset:0 auto 0 0;width:min(88%,340px);background:#fff;color:#020617;padding:20px 20px 32px;box-shadow:0 25px 50px -12px rgb(15 23 42/.25)}.ds-drawer header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}.ds-drawer header strong{font-size:16px}.ds-drawer button{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border:0;border-radius:8px;background:transparent;color:#475569;cursor:pointer}.ds-drawer button:hover{background:#F1F5F9;color:#020617}.ds-drawer button:focus-visible{outline:0;box-shadow:0 0 0 2px var(--color-primary,#0046FB)}.ds-drawer button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}.ds-drawer>p{margin:0 0 8px;padding:0 12px;color:#64748B;font-size:11px;font-weight:700;letter-spacing:.12em}.ds-drawer nav{display:grid;gap:2px}.ds-drawer nav a{border-radius:8px;color:#475569;padding:8px 12px;text-decoration:none;font-size:14px;line-height:20px}.ds-drawer nav a:hover{background:#F1F5F9;color:#020617}.ds-drawer nav a:focus-visible{outline:0;box-shadow:0 0 0 2px var(--color-primary,#0046FB)}.ds-drawer nav .ds-drawer-current{background:#EAF1FF;color:#003CCF;font-weight:600}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El manual de confianza operacional",
+    "overview": "La documentación se comporta como un manual técnico que reduce incertidumbre antes de pedir una acción. Su mundo es blanco y azul EMVERAX: preciso, sobrio y moderno, con navegación persistente, reglas frías, jerarquía tipográfica firme y ejemplos ejecutables que mantienen visible el camino seguro de integración.\n\nLa expresión evita la estética de una landing comercial. No usa gradientes promocionales, grandes gestos decorativos ni colecciones de tarjetas inconexas; la personalidad aparece en la exactitud de la retícula, el azul usado con medida, los bloques navy de código y una profundidad reservada para capas funcionales. La densidad es informativa pero respirable, y cada patrón debe ayudar a leer, orientarse, copiar o decidir.",
+    "keyCharacteristics": [
+      "Manual técnico blanco y azul, no página de venta.",
+      "Jerarquía de lectura firme con Inter y columna de texto contenida.",
+      "Navegación precisa y persistente en escritorio, accesible como cajón en móvil.",
+      "Bordes fríos, radios contenidos y profundidad funcional.",
+      "Código navy como ancla visual de la integración segura."
+    ],
+    "rules": [
+      {
+        "name": "The Azul Medido Rule",
+        "body": "El azul principal señala posición, acción o método; no rellena grandes superficies de lectura ni se usa como ornamento.",
+        "section": "colors"
+      },
+      {
+        "name": "The Jerarquía Silenciosa Rule",
+        "body": "La comprensión nace de escala, peso y espacio; no añadas color ni ornamentación cuando la jerarquía tipográfica ya resuelve la relación.",
+        "section": "typography"
+      },
+      {
+        "name": "The Camino Visible Rule",
+        "body": "El lector debe conservar simultáneamente orientación, contenido actual y siguiente paso; cualquier adaptación responsiva puede reubicar esos elementos, pero no volverlos ambiguos.",
+        "section": "layout"
+      },
+      {
+        "name": "The Profundidad Contenida Rule",
+        "body": "Una superficie obtiene sombra solo cuando cambia de plano o de responsabilidad; el contenido ordinario se estructura con reglas y espacio.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Esquina con Función Rule",
+        "body": "El radio comunica escala y contención: compacto para metadatos, medio para controles y amplio solo para contenedores técnicos completos.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do usa el azul EMVERAX para acciones, foco, posición y métodos; deja la mayor parte de la pantalla blanca.",
+      "Do mantiene la prosa entre 66ch y 72ch y el shell de lectura por debajo de 800px.",
+      "Do presenta el camino recomendado antes de la referencia exhaustiva.",
+      "Do conserva foco visible, navegación por teclado y estados accesibles en búsqueda, cajón y acciones.",
+      "Do usa navy y tipografía monoespaciada para ejemplos que el integrador puede copiar literalmente."
+    ],
+    "donts": [
+      "Don't conviertas la documentación en una landing promocional con gradientes, píldoras decorativas o grandes fondos azules.",
+      "Don't encierres cada fragmento en una tarjeta; usa reglas, ritmo y contenedores solo cuando expresan estructura o estado.",
+      "Don't uses sombras en contenido ordinario ni mezcles más de un nivel de elevación sin una razón funcional.",
+      "Don't sustituyas Inter por una tipografía expresiva ni uses mono fuera de código, rutas, métodos y valores literales.",
+      "Don't ocultes credenciales, límites o próximos pasos detrás de interacción innecesaria."
+    ]
+  }
+}

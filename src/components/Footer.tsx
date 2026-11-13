@@ -59,7 +59,7 @@ export default async function Footer() {
                                 <h3 className="text-sm font-semibold leading-6 text-gray-900">{t('support')}</h3>
                                 <ul role="list" className="mt-6 space-y-4">
                                     <li><Link href="/contacto" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('contact')}</Link></li>
-                                    <li><a href="#" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('apiDocs')}</a></li>
+                                    <li><Link href="/docs" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('apiDocs')}</Link></li>
                                     <li><a href="#" className="text-sm leading-6 text-gray-600 hover:text-primary">{t('status')}</a></li>
                                 </ul>
                             </div>

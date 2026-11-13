@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { docsSlugs } from '@/lib/docs'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://emverax.com'
@@ -99,5 +100,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'yearly',
             priority: 0.3,
         },
+        ...docsSlugs.map((slug) => ({
+            url: slug ? `${baseUrl}/docs/${slug}` : `${baseUrl}/docs`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: slug ? 0.65 : 0.85,
+        })),
     ]
 }
